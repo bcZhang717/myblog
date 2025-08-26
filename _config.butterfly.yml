@@ -21,9 +21,9 @@ nav:
 # 顶部菜单栏
 # --------------------------------------
 menu:
-  主页: / || fas fa-home
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
+  主页: / || iconfont icon-a-homezhuyefangzijia
+  标签: /tags/ || iconfont icon-biaoqian
+  分类: /categories/ || iconfont icon-wenjianjia
   时间线: /archives/ || iconfont icon-shijian
   关于我: /about/ || iconfont icon-guanyuwomen
   其他|| iconfont icon-qita:
@@ -824,10 +824,10 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
-  global_font_size: 15px
-  code_font_size: 15px
-  font_family:
-  code_font_family:
+  global_font_size: 16px
+  code_font_size: 14px
+  font_family: myfont
+  code_font_family: font-en
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -1058,6 +1058,7 @@ inject:
    - "<style>#article-container.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { -webkit-animation: avatar_turn_around 1s linear infinite; -moz-animation: avatar_turn_around 1s linear infinite; -o-animation: avatar_turn_around 1s linear infinite; -ms-animation: avatar_turn_around 1s linear infinite; animation: avatar_turn_around 1s linear infinite; }</style>"
    - <link rel="stylesheet" href="/css/cursors.css">
    - <link rel="stylesheet" href="/css/iconfont.css">
+   - <link rel="stylesheet" href="/css/font.css">
   bottom:
     - <div class="aplayer no-destroy" data-id="14188285995" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-order="random"> </div>
     - <script src="/js/snow.js"></script> # 雪花

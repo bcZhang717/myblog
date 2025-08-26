@@ -2,9 +2,9 @@
     font-family: "iconfont"; /* Project id 4748730 */
     /* Color fonts */
     src:
-            url('//at.alicdn.com/t/c/font_4748730_vqae5rwcdt.woff2?t=1756123985640') format('woff2'),
-            url('//at.alicdn.com/t/c/font_4748730_vqae5rwcdt.woff?t=1756123985640') format('woff'),
-            url('//at.alicdn.com/t/c/font_4748730_vqae5rwcdt.ttf?t=1756123985640') format('truetype');
+            url('//at.alicdn.com/t/c/font_4748730_fy72n535yj.woff2?t=1756174768734') format('woff2'),
+            url('//at.alicdn.com/t/c/font_4748730_fy72n535yj.woff?t=1756174768734') format('woff'),
+            url('//at.alicdn.com/t/c/font_4748730_fy72n535yj.ttf?t=1756174768734') format('truetype');
 }
 
 .iconfont {
@@ -13,6 +13,25 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+    content: "\e6a7";
+}
+
+.icon-biaoqian:before {
+    font-size: 18px;
+    content: "\f24b";
+}
+
+.icon-wenjianjia:before {
+    font-size: 18px;
+    content: "\f44a";
+}
+
+.icon-a-homezhuyefangzijia:before {
+    font-size: 18px;
+    content: "\e6ae";
 }
 
 .icon-tushu:before {
