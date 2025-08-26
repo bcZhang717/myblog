@@ -1,0 +1,23 @@
+- class_name:
+  class_desc:
+  link_list:
+    - name: 我的 CSDN
+      link: https://blog.csdn.net/z030622?spm=1000.2115.3001.10640
+      avatar: https://g.csdnimg.cn/static/logo/favicon32.ico
+      descr: CSDN 是全球知名中文 IT 技术交流平台，创建于 1999 年，包含原创博客、精品问答、职业培训、技术论坛、资源下载等产品服务，提供原创、优质、完整内容的专业 IT 技术开发社区。
+
+- class_name: 爱谦 717 的优质推荐
+  class_desc:
+  link_list:
+    - name: Toolbox
+      link: https://app.timelessq.com/
+      avatar: https://app.timelessq.com/favicon.ico
+      descr: 一个安全免费的工具箱，所有数据处理都在客户端完成，不上传服务端，所有工具免费使用且无需登录。
+    - name: UU 在线工具
+      link: https://uutool.cn/
+      avatar: https://uutool.cn/assets/images/favicon.png
+      descr: UU 在线工具提供数百款便捷实用的在线工具，覆盖文本处理、图像编辑、编程辅助、音视频处理等多个领域，无需注册登录及下载，即开即用，轻松应对各种日常数据处理需求。
+    - name: 简单简历
+      link: https://easycv.cn/
+      avatar: https://easycv.cn/favicon.ico
+      descr: 在线简历生成器，专门为互联网从业者设计，多种模版以及实例可选，五分钟快速打造完美简历。现在就开始创建简历，为心仪的工作保驾护航。
