@@ -50,9 +50,9 @@ code_blocks:
 # 社交图标
 # --------------------------------------
 social:
-  fab fa-github: https://github.com/bcZhang || GitHub || '#24292e'
-  iconfont icon-QQ: /img/QQ-chat.jpg || QQ
-  fab fa-weixin: /img/chat.png || 微信 || '#63E6BE'
+  fab fa-github fa-spin: https://github.com/bcZhang || GitHub || '#606dd2'
+  fab fa-qq fa-shake: /img/QQ-chat.jpg || QQ || '#74c0fc'
+  fab fa-weixin fa-bounce: /img/chat.png || 微信 || '#63bba0'
 
 # --------------------------------------
 # 图片设置
