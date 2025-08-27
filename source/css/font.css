@@ -9,3 +9,11 @@
     font-display: swap;
     src: url('../font/font-en.ttf') format("truetype");
 }
+/*侧边卡片的透明度 */
+:root {
+    --card-bg: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] {
+    --card-bg: rgba(255, 255, 255, 0.2);
+}
