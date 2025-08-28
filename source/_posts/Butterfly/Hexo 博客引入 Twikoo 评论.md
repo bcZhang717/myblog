@@ -1,7 +1,7 @@
 ---
 title: Hexo 博客引入 Twikoo 评论
 date: 2025-08-27
-description: 
+description: 本文详细介绍了如何在基于 Butterfly 主题的 Hexo 博客中集成和美化 Twikoo 评论系统。首先通过 MongoDB Atlas 和 Vercel 部署 Twikoo 后端服务，然后在 Butterfly 主题配置文件中启用 Twikoo 评论功能。接着通过添加自定义 JavaScript 和 CSS 代码实现表情包放大效果，并介绍了如何通过 Twikoo 管理面板自定义表情包，从而提升博客的交互性和视觉体验。
 tags:
   - Hexo
   - Butterfly
@@ -21,6 +21,8 @@ categories:
 我们可以使用免费的 `Vercel` 进行部署 `Twikoo` 评论，否则就要使用服务器去部署了。
 
 官方文档：[Vercel 部署 Twikoo](https://twikoo.js.org/backend.html#vercel-%E9%83%A8%E7%BD%B2)
+
+{% link https://twikoo.js.org/backend.html#vercel-%E9%83%A8%E7%BD%B2, Vercel 部署 Twikoo, https://twikoo.js.org/twikoo-logo-home.png %}
 
 下面来详细的介绍部署过程。
 
@@ -84,7 +86,7 @@ mongodb+srv://bczhang:你刚刚设置的数据库密码@myblog.yd61ctz.mongodb.n
 
 弹出的窗口中继续点击 `Redeploy` 进行重新部署，等待完成即可。
 
-<img src = "https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250827221615202.png" style="zoom:67%;" />
+<img src = "https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250827221615202.png" style="zoom:67%;"  alt="20250827221615202.png"/>
 
 部署成功后会显示 "云函数运行正常 ..."，然后复制 Domains 下的一个链接，作为 Butterfly 集成 Twikoo 的 `envId` 。
 
@@ -112,19 +114,133 @@ twikoo:
 
 随后使用 `hexo clean && hexo generate && hexo server` 命令即可本地预览是否配置 Twikoo 评论成功。
 
-<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250827223341705.png" alt="image-20250827223341517" style="zoom:67%;" />
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828093308711.png" alt="image-20250828093308530" style="zoom:67%;" />
 
 然后使用命令 `hexo clean && hexo generate && hexo deploy` 即可托管博客到 Github。
 
-至此，大功告成！
+# Twikoo 评论模块美化
 
+## 表情包放大效果
 
+1、粘贴以下内容到自定义的 js 文件即可。
 
+```javascript
+// 如果当前页有评论就执行函数
+if (document.getElementById('post-comment')) owoBig();
 
+// 表情放大
+function owoBig() {
+    let flag = 1, // 设置节流阀
+        owo_time = '', // 设置计时器
+        m = 3; // 设置放大倍数
+    // 创建盒子
+    let div = document.createElement('div'),
+        body = document.querySelector('body');
+    // 设置ID
+    div.id = 'owo-big';
+    // 插入盒子
+    body.appendChild(div)
 
+    // 构造observer
+    let observer = new MutationObserver(mutations => {
 
+        for (let i = 0; i < mutations.length; i++) {
+            let dom = mutations[i].addedNodes,
+                owo_body = '';
+            if (dom.length == 2 && dom[1].className == 'OwO-body') owo_body = dom[1];
+                // 如果需要在评论内容中启用此功能请解除下面的注释
+            // else if (dom.length == 1 && dom[0].className == 'tk-comment') owo_body = dom[0];
+            else continue;
 
+            // 禁用右键
+            if (document.body.clientWidth <= 768) owo_body.addEventListener('contextmenu', e => e.preventDefault());
+            // 鼠标移入
+            owo_body.onmouseover = (e) => {
+                // 检查父元素的 className 是否包含 'OwO-packages'
+                if (e.target.parentElement.parentElement.parentElement && e.target.parentElement.parentElement.parentElement.className.includes('OwO-packages')) return;
+                if (flag && e.target.tagName == 'IMG') {
+                    flag = 0;
+                    // 移入300毫秒后显示盒子
+                    owo_time = setTimeout(() => {
+                        let height = e.target.clientHeight * m, // 盒子高
+                            width = e.target.clientWidth * m, // 盒子宽
+                            left = (e.x - e.offsetX) - (width - e.target.clientWidth) / 2, // 盒子与屏幕左边距离
+                            top = e.y - e.offsetY; // 盒子与屏幕顶部距离
+						 // 右边缘检测, 防止超出屏幕
+                        if ((left + width) > body.clientWidth) left -= ((left + width) - body.clientWidth + 10);
+                        if (left < 0) left = 10; // 左边缘检测, 防止超出屏幕
+                        // 设置盒子样式
+                        div.style.cssText = `display:flex; height:${height}px; width:${width}px; left:${left}px; top:${top}px;`;
+                        // 在盒子中插入图片
+                        div.innerHTML = `<img src="${e.target.src}">`
+                    }, 300);
+                }
+            };
+            // 鼠标移出隐藏盒子
+            owo_body.onmouseout = () => {
+                div.style.display = 'none', flag = 1, clearTimeout(owo_time);
+            }
+        }
+    })
+    observer.observe(document.getElementById('post-comment'), {subtree: true, childList: true}) // 监听的元素和配置项
+}
+```
 
+2、将以下内容粘贴到自定义的 CSS 文件即可。
+
+```css
+#owo-big {
+    position: fixed;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px #aaa solid;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+    transform: translate(0, -105%);
+    overflow: hidden;
+    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
+}
+
+[data-theme=dark] #owo-big {
+    background-color: #4a4a4a
+}
+
+#owo-big img {
+    width: 100%;
+}
+
+@keyframes owoIn {
+    0% {
+        transform: translate(0, -95%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, -105%);
+        opacity: 1;
+    }
+}
+```
+
+3、效果展示
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828101805440.png" alt="image-20250828101805202" style="zoom:67%;" />
+
+## 自定义表情包
+
+1、点击评论区右下角的 `齿轮` 图标 (如上图)，设置一个密码，进入管理界面。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828101956335.png" alt="image-20250828101956208" style="zoom:67%;" />
+
+2、进入 Twikoo 管理面板后，依次找到：配置管理、插件。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828102052453.png" alt="image-20250828102052341" style="zoom:67%;" />
+
+3、最后找到 `EMOTION_CDN` ，填入 `https://cdn.cbd.int/daliyuer-static@latest/bq/twikoo.json` ，使用大佬制作好的表情包。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828102232618.png" alt="image-20250828102232494" style="zoom:50%;" />
+
+4、最后划到页面最下方，点击保存即可。
 
 
 

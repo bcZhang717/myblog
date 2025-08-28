@@ -21,3 +21,7 @@
       link: https://easycv.cn/
       avatar: https://easycv.cn/favicon.ico
       descr: 在线简历生成器，专门为互联网从业者设计，多种模版以及实例可选，五分钟快速打造完美简历。现在就开始创建简历，为心仪的工作保驾护航。
+    - name: RGB 颜色值与十六进制颜色码转换工具
+      link: https://www.sioe.cn/yingyong/yanse-rgb-16/
+      avatar: https://www.sioe.cn/favicon.ico
+      descr: 一个十六进制可视化颜色转换工具，将 RGB 颜色值转换为十六进制颜色码，并提供了大量的颜色示例，方便用户快速选择适合自己的颜色。
