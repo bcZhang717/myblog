@@ -126,15 +126,9 @@ mongodb+srv://bczhang:你刚刚设置的数据库密码@myblog.yd61ctz.mongodb.n
 }
 ```
 
+7、注意注意注意，第五步的图片是错误的，我们需要打开 `Edit` 使其禁止重定向，不然会出现跨域问题！！！
 
-
-
-
-
-
-
-
-
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828155349744.png" alt="image-20250828155349586" style="zoom:67%;" />
 
 # Twikoo 接入 Butterfly
 
