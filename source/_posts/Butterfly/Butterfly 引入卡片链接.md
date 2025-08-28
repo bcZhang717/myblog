@@ -99,14 +99,25 @@ hexo.extend.tag.register('link', link, { ends: false })
 如: {% link www.baidu.com, 百度, www.baidu.com/favicon/ico, 这是描述 %}
 ```
 
+<style>
+table th:nth-of-type(1) {
+    text-align: center;
+    width: 60px;
+}
+
+table th:nth-of-type(2) {
+    width: 200px;
+}
+</style>
 
 
-| 参数 | 描述                                               |
-| ---- | -------------------------------------------------- |
-| 链接 | 如果连接中包含 http 则新标签打开，否则本标签页打开 |
-| 标题 | 链接的标题                                         |
-| 图标 | 网站的 ico 图标                                    |
-| 描述 | 网站的描述信息                                     |
+
+|   参数   | 描述                                               |
+|:------:| -------------------------------------------------- |
+|   链接   | 如果连接中包含 http 则新标签打开，否则本标签页打开 |
+|   标题   | 链接的标题                                         |
+|   图标   | 网站的 ico 图标                                    |
+|   描述   | 网站的描述信息                                     |
 
 ## 效果展示
 
