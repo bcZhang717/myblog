@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #49b1f5;
+    background-color: #C71585;
     background-image: -webkit-linear-gradient(
             45deg,
             rgba(255, 255, 255, 0.4) 25%,

@@ -29,3 +29,44 @@
         opacity: 1;
     }
 }
+
+/* 为内联代码块添加背景色 */
+code {
+    /* 你可以根据喜好调整颜色 */
+    background-color: #6d73b7e6 !important; /* 浅灰色，经典代码背景色 */
+
+    /* 可选：添加圆角，看起来更现代 */
+    border-radius: 3px;
+}
+
+/* 小代码块 */
+code {
+    color: #570573e6 !important; /* 例如粉红色 */
+}
+
+/* 链接 */
+.container a {
+    color: #00b94e;
+}
+
+/* 引用块 */
+blockquote {
+    padding: 7px 10px;
+    border-left: 4px solid #ea4c89;
+    background-color: #58785a21;
+}
+
+/* 标签点 */
+#post .tag_share .post-meta__tags {
+    border: 1px solid #717582;
+}
+
+/* 选中文字颜色 */
+*::selection {
+    background: #5daab259;
+}
+
+/* 加粗文本颜色 */
+b, strong {
+    color: #e468dbc2;
+}
