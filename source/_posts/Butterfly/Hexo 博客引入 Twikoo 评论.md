@@ -92,6 +92,50 @@ mongodb+srv://bczhang:你刚刚设置的数据库密码@myblog.yd61ctz.mongodb.n
 
 ![image-20250827222114724](https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250827222114826.png)
 
+## Vercel 绑定域名 (可选)
+
+由于 `vercel.app` 域名已经被 DNS 污染，那么国内网络应该都是无法进行访问的，所以我们需要绑定自己的域名来转发 Vercel DNS Server 地址。如果你不想这样做，那么访问评论就只能通过 "魔法" 了。
+
+1、找到 Vercel 中部署的 Twikoo 项目，点击 `Settings` 选项卡，跳转页面后点击左侧的 `Domains` ，输入你自己定义的域名。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828140254540.png" alt="image-20250828140254351" style="zoom:50%;" />
+
+2、输入自己的域名即可，这里建议单独买一个域名，避免后续造成 CNAME 指向网址，A 指向 IP 造成的矛盾。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828151448063.png" alt="image-20250828151447852" style="zoom:50%;" />
+
+3、接下来会出现配置问题，根据指引去添加域名解析即可。有一个报错就添加一个，有两个就添加两个，这里我是两个。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828151634194.png" alt="image-20250828151634053" style="zoom:50%;" />
+
+4、根据提示进行解析即可，没什么特别的，我是用的是腾讯云买的域名。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828151848632.png" alt="image-20250828151848501" style="zoom:50%;" />
+
+5、回到 Vercel 界面，`Refresh` 刷新，看看域名是否解析成功 (需要等待一段时间)。
+
+<img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828152328231.png" alt="image-20250828152328106" style="zoom:50%;" />
+
+6、此时如果在浏览器中输入 `https://aiqian.online` 显示如下的内容就代表域名解析成功。
+
+```json
+{
+    "code": 100,
+    "message": "Twikoo 云函数运行正常，请参考 https://twikoo.js.org/frontend.html 完成前端的配置",
+    "version": "1.6.44"
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 # Twikoo 接入 Butterfly
 
 回到博客中 Butterfly 主题的配置文件 `_config.butterfly.yml` ，修改如下配置：
@@ -111,6 +155,8 @@ twikoo:
   visitor: true # 是否展示文章阅读数
   option:
 ```
+
+> 如果绑定了域名，可以将 `envId` 填写为 `https://aiqian.online` 。
 
 随后使用 `hexo clean && hexo generate && hexo server` 命令即可本地预览是否配置 Twikoo 评论成功。
 

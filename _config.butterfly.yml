@@ -626,7 +626,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo-bczhang717s-projects.vercel.app
+  envId: https://aiqian.online
   region:
   # Use Twikoo visitor count as the page view count
   visitor: true
