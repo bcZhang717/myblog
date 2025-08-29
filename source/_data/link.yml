@@ -25,3 +25,23 @@
       link: https://www.sioe.cn/yingyong/yanse-rgb-16/
       avatar: https://www.sioe.cn/favicon.ico
       descr: 一个十六进制可视化颜色转换工具，将 RGB 颜色值转换为十六进制颜色码，并提供了大量的颜色示例，方便用户快速选择适合自己的颜色。
+    - name: 编程导航
+      link: https://www.codefather.cn/
+      avatar: https://www.codefather.cn/favicon.ico
+      descr: 学编程，就来编程导航，程序员免费编程学习交流社区。Java,Python,前端,web网站开发,C语言,C++,Go,后端,SQL,数据库,PHP入门学习、技能提升、求职面试法宝。提升编程效率、优质IT技术文章、海量计算机教程资源、精品实战项目，跟百万开发者学习交流成长。编程导航，做您编程学习路上的导航员。
+    - name: 面试鸭
+      link: https://www.mianshiya.com/
+      avatar: https://www.mianshiya.com/favicon.ico
+      descr: 程序员面试刷题，就来面试鸭，程序员免费求职面试刷题网站。海量高频Java,前端,后端,C++,Go,Python,软件测试,IT运维,数据库,SQL,数据结构,算法面试题和优质题解，助你通关校招,社招,实习,国企,互联网,大厂,考研求职面试。帮你备战技术面试、提升编程技术、快速找到工作。面试鸭，程序员求职面试刷题神器。
+    - name: 老鱼简历
+      link: https://www.laoyujianli.com/
+      avatar: https://www.laoyujianli.com/favicon.ico
+      descr: 个人简历模板,在线写简历,简历制作,简历网,老鱼简历,AI简历,AI智能生成简历,在线写简历,在线简历模板,简历生成,AI生成简历
+    - name: JavaGuide
+      link: https://javaguide.cn/
+      avatar: https://javaguide.cn/favicon.ico
+      descr: 【Java学习 + 面试指南】一份涵盖大部分 Java 程序员所需要掌握的核心知识。准备 Java 面试，首选 JavaGuide！
+    - name: 算法导航
+      link: https://algo.codefather.cn/
+      avatar: https://www.codefather.cn/favicon.ico
+      descr: 算法学习, 算法可视化, 数据结构, 排序算法, 搜索算法, 图论算法, 树结构, 动态规划, 贪心算法, 算法动画, 交互式学习, 编程学习, 算法面试, 算法题解, 计算机科学
