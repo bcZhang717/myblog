@@ -1,11 +1,16 @@
 ---
 title: Butterfly 引入卡片链接
+date: 2025-08-28 
 tags:
   - Hexo
   - Butterfly
   - 卡片链接
 categories:
   - Butterfly
+description: >-
+  这里是爱谦AI，这篇文章介绍了Butterfly主题中引入卡片链接的方法，包括如何通过创建link.js文件来实现卡片链接功能。
+  文章详细说明了在node_modules/hexo-theme-butterfly/scripts/tag目录下创建该文件，并提供了具体的代码内容，其中包含了SVG图标和样式设置。
+  通过使用特定的标签语法，用户可以在文章中插入带有图标、标题、链接和描述的卡片链接，提升页面的视觉效果和用户体验。
 summary: >-
   这里是爱谦AI，这篇文章介绍了Butterfly主题中引入卡片链接的方法，包括如何通过创建link.js文件来实现卡片链接功能。文章详细说明了在node_modules/hexo-theme-butterfly/scripts/tag目录下创建该文件，并提供了具体的代码内容，其中包含了SVG图标和样式设置。通过使用特定的标签语法，用户可以在文章中插入带有图标、标题、链接和描述的卡片链接，提升页面的视觉效果和用户体验。
 ---
