@@ -55,7 +55,7 @@ prismjs: # 代码块的设置, 后续再说
 # Home page setting 首页设置
 index_generator:
   path: '' # 博客索引页面的根路径
-  per_page: 5 # 每页显示帖子数
+  per_page: 8 # 每页显示帖子数
   order_by: -date # 帖子排列顺序, 目前是按日期倒序排列(从新到旧)
 
 # Category & Tag setting 分类和标签设置
