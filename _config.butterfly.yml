@@ -1139,3 +1139,12 @@ CDN:
   # valine:
   # waline_css:
   # waline_js:
+# --------------------------------------
+# 文章设置
+# --------------------------------------
+# 文章 AI 摘要是否开启, 会自动检索文章 summary 字段, 若没有则不显示
+ai_summary:
+  enable: true
+  title: 爱谦のAI摘要
+  loadingText: 摘要正在生成中···
+  modelName: qwen-turbo

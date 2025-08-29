@@ -1,13 +1,17 @@
 ---
 title: MySQL 三大日志与两阶段提交
-date: 2025-08-25
-description: 本文详细介绍了MySQL的三大核心日志：undo log、redo log和binlog，以及它们在保证事务ACID特性中的作用。undo log通过记录数据的历史版本来保证事务的原子性，并配合readview实现MVCC多版本并发控制；redo log作为物理日志记录数据页的修改，通过顺序IO刷盘保证事务的持久性和崩溃恢复；binlog作为逻辑日志记录SQL操作，用于数据备份恢复和主从复制。文章重点阐述了两阶段提交机制如何解决redo log和binlog之间的一致性问题，通过prepare和commit两个阶段确保事务在两个日志中的状态保持一致，并利用XID字段进行数据一致性校验，最终实现数据的可靠性和一致性保障。
 tags:
   - MySQL
   - 日志
 categories:
   - MySQL
+summary: >-
+  这里是爱谦AI，这篇文章详细介绍了MySQL的三大日志：undo log、redo log和binlog的作用与机制。undo
+  log用于保证事务的原子性，记录数据的版本变化以支持回滚和MVCC；redo
+  log确保事务的持久性，通过记录物理页的修改并在崩溃后恢复数据；binlog则是逻辑日志，用于备份恢复和主从复制。文章还深入讲解了两阶段提交的过程，通过prepare和commit阶段协调redo
+  log和binlog的一致性，确保事务在异常情况下能够正确恢复，从而保障数据的一致性和可靠性。
 ---
+
 MySQL 的三大日志：undo log、redo log、binlog
 # undo log
 
@@ -119,104 +123,3 @@ redo log 是物理日志，记录的内容是 "在某个数据页上做了什么
 redo log 与 binlog 中存在一个共同的字段 `XID` 。因此崩溃恢复的时候，扫描 redo log，如果发现有 `prepare` 的 redolog，则利用它的 `XID` 去 binlog 查询，如果找到对应的数据，则说明数据都保存了，事务可以提交，反之事务回滚。
 
 由此看来，两阶段提交最终还是要看 binlog 日志。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,13 +1,15 @@
 ---
 title: Hexo 博客引入 Twikoo 评论
-date: 2025-08-27
-description: 本文详细介绍了如何在基于 Butterfly 主题的 Hexo 博客中集成和美化 Twikoo 评论系统。首先通过 MongoDB Atlas 和 Vercel 部署 Twikoo 后端服务，然后在 Butterfly 主题配置文件中启用 Twikoo 评论功能。接着通过添加自定义 JavaScript 和 CSS 代码实现表情包放大效果，并介绍了如何通过 Twikoo 管理面板自定义表情包，从而提升博客的交互性和视觉体验。
 tags:
   - Hexo
   - Butterfly
 categories:
   - Butterfly
+summary: >-
+  这里是爱谦AI，这篇文章介绍了如何在Hexo博客中引入Twikoo评论系统。作者最初使用的是Livere评论，但后来发现Twikoo更受欢迎且界面更好，因此决定进行替换。文章详细描述了部署Twikoo的过程，包括申请MongoDB
+  Atlas账号、通过Vercel部署Twikoo云函数以及绑定自定义域名的步骤。同时，还讲解了如何在Butterfly主题中配置Twikoo，并提供了美化评论模块的方法，如添加表情包放大效果的JavaScript代码。整体内容涵盖了从环境搭建到前端集成的完整流程。
 ---
+
 # 前言
 
 > [Butterfly 官方文档的评论模块](https://butterfly.js.org/posts/4aa8abbe/#%E8%A9%95%E8%AB%96)
@@ -281,12 +283,3 @@ function owoBig() {
 <img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828102232618.png" alt="image-20250828102232494" style="zoom:50%;" />
 
 4、最后划到页面最下方，点击保存即可。
-
-
-
-
-
-
-
-
-

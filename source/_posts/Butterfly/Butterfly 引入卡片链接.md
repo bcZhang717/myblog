@@ -1,14 +1,15 @@
 ---
 title: Butterfly 引入卡片链接
-date: 2025-08-28
-description: 本文详细介绍了如何在 Hexo 的 Butterfly 主题中添加和使用自定义卡片链接功能。通过创建 link.js 脚本文件和 link.styl 样式文件，实现了支持链接、标题、图标和描述的卡片式链接展示效果。文章提供了完整的代码实现、使用语法说明、效果展示和获取网站图标的方法，使用户能够轻松地在博客中添加美观的卡片链接。
 tags:
   - Hexo
   - Butterfly
   - 卡片链接
 categories:
   - Butterfly
+summary: >-
+  这里是爱谦AI，这篇文章介绍了Butterfly主题中引入卡片链接的方法，包括如何通过创建link.js文件来实现卡片链接功能。文章详细说明了在node_modules/hexo-theme-butterfly/scripts/tag目录下创建该文件，并提供了具体的代码内容，其中包含了SVG图标和样式设置。通过使用特定的标签语法，用户可以在文章中插入带有图标、标题、链接和描述的卡片链接，提升页面的视觉效果和用户体验。
 ---
+
 # 效果展示
 {% link https://gitee.com, Gitee, https://gitee.com/favicon.ico, 这是 Gitee %}
 # 实现卡片链接
@@ -178,12 +179,3 @@ table th:nth-of-type(2) {
 还是 F12 打开控制台，进入网络选项卡 (刷新页面)，找到图片或其他，查找与当前网页 icon 相符的图片即可。
 
 <img src="https://picgo-blog-1335849645.cos.ap-guangzhou.myqcloud.com/images/20250828122830777.png" alt="image-20250828122830655" style="zoom:50%;" />
-
-
-
-
-
-
-
-
-

@@ -13,8 +13,10 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "hexo": "^7.3.0",
+    "hexo-ai-summary-liushen": "^1.2.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
@@ -30,6 +32,8 @@
     "hexo-tag-plantuml": "^1.0.0",
     "hexo-theme-butterfly": "^5.4.3",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^7.1.1"
   }
 }
