@@ -33,7 +33,7 @@
 /* 为内联代码块添加背景色 */
 code {
     /* 你可以根据喜好调整颜色 */
-    background-color: #6d73b7e6 !important; /* 浅灰色，经典代码背景色 */
+    background-color: #41c8658f !important; /* 浅灰色，经典代码背景色 */
 
     /* 可选：添加圆角，看起来更现代 */
     border-radius: 3px;
@@ -41,7 +41,7 @@ code {
 
 /* 小代码块 */
 code {
-    color: #570573e6 !important; /* 例如粉红色 */
+    color: #000 !important; /* 例如粉红色 */
 }
 
 /* 链接 */
