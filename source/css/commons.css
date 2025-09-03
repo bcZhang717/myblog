@@ -63,10 +63,21 @@ blockquote {
 
 /* 选中文字颜色 */
 *::selection {
-    background: #5daab259;
+    background: #000000ad
 }
 
 /* 加粗文本颜色 */
 b, strong {
     color: #e468dbc2;
+}
+
+.container kbd {
+    font-size: 12px;
+    color: #333333bd;
+    line-height: 12px;
+    border-radius: 5px;
+    font-family: font-en, monospace;
+}
+.container .btn-beautify {
+    margin: 0 4px 0;
 }

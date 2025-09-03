@@ -65,10 +65,10 @@ avatar:
 disable_top_img: false # 是否开启顶部图
 
 # 默认顶部图, 做兜底
-default_top_img: # 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)'
+default_top_img: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)'
 
 # 主页顶部图
-index_img: transparent
+index_img: /img/error-page.png
 
 # 时间线页面顶部图
 archive_img: /img/archive.jpg
@@ -90,11 +90,11 @@ category_img:
 category_per_img:
 
 # 页脚背景图
-footer_img: transparent
+footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background: /img/error-page.png
+background:
 
 cover:
   # Disable the cover or not
@@ -150,7 +150,7 @@ post_meta:
 # The position of site info, eg: 300px/300em/300rem/10%
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
-index_top_img_height: 400px
+index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
@@ -792,8 +792,8 @@ text_align_justify: false
 
 # Add a mask to the header and footer
 mask:
-  header: false # 添加黑色遮罩
-  footer: false # 添加黑色遮罩
+  header: true # 添加黑色遮罩
+  footer: true # 添加黑色遮罩
 
 # Loading Animation
 preloader:
@@ -806,10 +806,10 @@ preloader:
   pace_css_url:
 
 # Page Transition
-enter_transitions: false
+enter_transitions: true
 
 # Default display mode - light (default) / dark
-display_mode: dark # 默认显示主题
+display_mode: light # 默认显示主题
 
 # Configuration for beautifying the content of the article
 beautify:
@@ -853,8 +853,7 @@ activate_power_mode:
 # --------------------------------------
 
 # canvas_ribbon
-# See: https://github.com/hustcc/ribbon.js
-canvas_ribbon:
+canvas_ribbon: # 静态彩带
   enable: false
   # The size of ribbon
   size: 150
@@ -865,14 +864,14 @@ canvas_ribbon:
   mobile: false
 
 # Fluttering Ribbon
-canvas_fluttering_ribbon:
-  enable: false
+canvas_fluttering_ribbon: # 动态彩带
+  enable: true
   mobile: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
-canvas_nest:
-  enable: true
+canvas_nest: # 游离彩带
+  enable: false
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   color: '0,0,255'
   # The opacity of line (0~1)
@@ -898,9 +897,18 @@ click_heart:
 clickShowText:
   enable: true
   text:
-    - I
-    - LOVE
-    - YOU
+    - 富强
+    - 民主
+    - 文明
+    - 和谐
+    - 自由
+    - 平等
+    - 公正
+    - 法治
+    - 爱国
+    - 敬业
+    - 诚信
+    - 友善
   fontSize: 15px
   random: false
   mobile: false
@@ -971,7 +979,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: flat
+  style: modern
   icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
@@ -1059,7 +1067,6 @@ inject:
    - <link rel="stylesheet" href="/css/cursors.css">
    - <link rel="stylesheet" href="/css/iconfont.css">
    - <link rel="stylesheet" href="/css/font.css">
-   - <link rel="stylesheet" href="/css/bg.css">
    - <link rel="stylesheet" href="/css/commons.css"> # 评论美化
   bottom:
     - <div class="aplayer no-destroy" data-id="14188285995" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-order="random"> </div>

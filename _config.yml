@@ -36,7 +36,7 @@ external_link:
   field: site # 对整个网站(site)生效或仅对文章(post)生效
   exclude: '' # 需要排除的域名
 filename_case: 0 # 0-按照自己的命名规则; 1-文件名全部转换为小写; 2-文件名全部转换为大写;
-render_drafts: false # 是否显示草稿
+render_drafts: true # 是否显示草稿
 post_asset_folder: false # 是否启用资源文件夹
 relative_link: false # 是否把链接改为与根目录的相对位址
 future: true # 是否显示未来的文章
@@ -121,3 +121,18 @@ aisummary:
 
   max_token: 5000           # 输入内容最大 token 长度(非输出限制)
   concurrency: 2            # 并发处理数, 建议不高于 5
+
+# tag-plugins-plus
+tag_plugins:
+  enable: true # 开关
+  priority: 5 # 过滤器优先权
+  issues: false # issues 标签依赖注入开关
+  link:
+    placeholder: /img/avatar.webp # link_card 标签默认的图标图片
+  CDN:
+    anima: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css # 动画标签 anima 的依赖
+    jquery: https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js # issues 标签依赖
+    issues: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js # issues 标签依赖
+    iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js # 参看 https://akilar.top/posts/d2ebecef/
+    carousel: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
